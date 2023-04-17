@@ -131,7 +131,6 @@ h1 {
     float: left;
 }
 
-/* 마우스 호버시 gnb */
 .coffe:hover .coffe-gnb,
 .menu:hover .menu-gnb,
 .news:hover .news-gnb,
@@ -143,9 +142,7 @@ h1 {
     /* display: block; */
     height: 300px;
     z-index: 11;
-
 }
-
 .coffe:hover .gnb-tab li,
 .menu:hover .gnb-tab li,
 .news:hover .gnb-tab li,
@@ -153,16 +150,12 @@ h1 {
 .reward:hover .gnb-tab li,
 .sale:hover .gnb-tab li,
 .store:hover .gnb-tab li {
-    /* opacity: 1; */
-    display: block;
+    opacity: 1;
 }
-
-.gnb-tab li {
-    /* opacity: 0; */
-    display: none;
+.gnb-var li {
+    opacity: 0;
     transition: all 0.5s;
 }
-
 .gnb-var {
     color: #fff;
     font-size: 14px;
@@ -177,8 +170,7 @@ h1 {
     height: 0;
     opacity: 0;
     transition: all 0.5s;
-    z-index: -1;
-
+    z-index: -9999;
 }
 
 .gnb-tab {
@@ -187,7 +179,10 @@ h1 {
 
 .gnb-tab li {
     width: 220px;
-
+}
+.gnb-tab > li{
+    opacity: 0;
+    transition: all 1s;
 }
 
 .gnb-tab li ul li {
@@ -202,5 +197,3 @@ h1 {
     color: #fff;
     transition: all 0.5s;
 }
-
-/* end header */

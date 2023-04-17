@@ -1,7 +1,7 @@
 window.onload = function () {
     const kindWrap = document.querySelector('.kind-wrap');
     const slider = kindWrap.querySelector('.slider');
-    const slideLis = slider.querySelectorAll('li')
+    const slideLis = slider.querySelectorAll('.slider li')
     const moveButton = kindWrap.querySelector('.arrow');
 
     /* 클론 */
