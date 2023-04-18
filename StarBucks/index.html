@@ -24,30 +24,11 @@
             <link rel="stylesheet" type="text/css" href="./css/notice.css">
         <title>Starbucks Korea</title>
         <style>
-            .visual-text{
-                font-size: 50px;
-                text-align-last: left;
-                margin-left: 95px;
-                margin-bottom: 25px;
-            }
-            .favorite-contents{
-                display: flex;
-            }
-            * {
-                box-sizing: border-box;
-            }
-
-            body{
-                background-color: #414141;
-            }
-
-
             .active {
                 /* left: 50%; */
                 left:-50px;
                 transition: all 1s;
             }
-            
         </style>
     </head>
     <body>
@@ -68,10 +49,10 @@
                             </li>
                         </ul>
                         <div class="logo-var cf">
-                            <ul>
-                                <li class="coffe inner_tab">COFFE
+                            <ul class="menu-tab">
+                                <li class="coffe inner-tab">COFFE
                                     <div class="gnb-var coffe-gnb">
-                                        <nav class="w1100  ">
+                                        <nav class=" w1100  ">
                                             <ul class="gnb-tab ">
                                                 <li>
                                                     커피
@@ -121,9 +102,9 @@
                                         </nav>
                                     </div>
                                 </li>
-                                <li class="menu inner_tab">MENU
+                                <li class="menu inner-tab">MENU
                                     <div class="gnb-var menu-gnb">
-                                        <nav class=" w1100 ">
+                                        <nav class="menu_tab w1100 ">
                                             <ul class="gnb-tab ">
                                                 <li>
                                                     음료
@@ -191,9 +172,9 @@
                                         </nav>
                                     </div>
                                 </li>
-                                <li class="store inner_tab">STORE
-                                    <div class="gnb-var store-gnb ">
-                                        <nav class="w1100 ">
+                                <li class="store inner-tab">STORE
+                                    <div class="gnb-var store-gnb">
+                                        <nav class="menu_tab w1100 ">
                                             <ul class="gnb-tab ">
                                                 <li>
                                                     매장 찾기
@@ -209,9 +190,9 @@
                                         </nav>
                                     </div>
                                 </li>
-                                <li class="responstible inner_tab">RESPONSIBILITY
+                                <li class="responstible inner-tab">RESPONSIBILITY
                                     <div class="gnb-var responsibility-gnb">
-                                        <nav class="w1100 ">
+                                        <nav class="menu_tab w1100 ">
                                             <ul class="gnb-tab ">
                                                 <li>사회공헌 캠페인 소개</li>
                                                 <li>
@@ -254,9 +235,9 @@
                                         </nav>
                                     </div>
                                 </li>
-                                <li class="reward inner_tab">STARBUCKS REWARDS
+                                <li class="reward inner-tab">STARBUCKS REWARDS
                                     <div class="gnb-var rewards-gnb">
-                                        <nav class=" w1100 ">
+                                        <nav class="menu_tab w1100 ">
                                             <ul class="gnb-tab ">
                                                 <li>
                                                     스타벅스 리워드
@@ -290,7 +271,7 @@
                                         </nav>
                                     </div>
                                 </li>
-                                <li class="sale inner_tab">CORPORATE SALES
+                                <li class="sale inner-tab">CORPORATE SALES
                                     <div class="gnb-var corporate-gnb">
                                         <nav class="menu_tab w1100 ">
                                             <ul class="gnb-tab ">
@@ -308,9 +289,9 @@
                                         </nav>
                                     </div>
                                 </li>
-                                <li class="news inner_tab">WHAT'S NEW
+                                <li class="news inner-tab">WHAT'S NEW
                                     <div class="gnb-var news-gnb">
-                                        <nav class="w1100 ">
+                                        <nav class="menu_tab w1100 ">
                                             <ul class="gnb-tab ">
                                                 <li>
                                                     이벤트
@@ -456,20 +437,20 @@
                 </div>
             </div>
         </section>
-        <section class="costaRica">
-            <div class="w1100 cf costaRica-contents ">
-                <div class="costaRica-left">
+        <section class="costarica">
+            <div class="w1100 cf costarica-contents ">
+                <div class="costarica-left">
                     <img src="./images/costaRicaText.png" alt="">
                     <p>자세히 보기</p>
                 </div>
-                <div class="costaRica-right">
-                    <img src="./images/costaRicaCoffe.png" alt="">
+                <div class="costarica-right">
+                    <img src="./images/costaricaCoffe.png" alt="">
                 </div>
             </div>
         </section>
         <section class="favorite">
             <div class="w1100 favorite-contents">
-                <div class="favorite_left">
+                <div class="favorite-left">
                     <div class="favoriteVisual-text box">
                         <img src="./images/favorite_visual.png" alt="비쥬얼 이미지">
                     </div>
@@ -506,39 +487,5 @@
         const observer = new IntersectionObserver(callback, option);
         boxes.forEach(box => observer.observe(box));
     </script>
-    <!-- <script>
-        function checkVisible( element, check = 'above' ) {
-            const viewportHeight = $(window).height(); // Viewport Height
-            const scrolltop = $(window).scrollTop(); // Scroll Top
-            const y = $(element).offset().top;
-            const elementHeight = $(element).height();   
-            
-            // 반드시 요소가 화면에 보여야 할경우
-            if (check == "visible") 
-                return ((y < (viewportHeight + scrolltop)) && (y > (scrolltop - elementHeight)));
-                
-            // 화면에 안보여도 요소가 위에만 있으면 (페이지를 로드할때 스크롤이 밑으로 내려가 요소를 지나쳐 버릴경우)
-            if (check == "above") 
-                return ((y < (viewportHeight + scrolltop)));
-        }
-
-        // 리소스가 로드 되면 함수 실행을 멈출지 말지 정하는 변수
-        let isVisible = false;
-
-        // 이벤트에 등록할 함수
-        const func = function () {
-            if ( !isVisible && checkVisible('#second') ) {
-                alert("엘리먼트 보임 !!");
-                
-                isVisible = true;
-            }
-            
-            // 만일 리소스가 로드가 되면 더이상 이벤트 스크립트가 있을 필요가 없으니 삭제
-            isVisible && window.removeEventListener('scroll', func);
-        }
-
-        // 스크롤 이벤트 등록
-        window.addEventListener('scroll', func);
-    </script> -->
     <script src="./js/idenx.js"></script>
 </html>

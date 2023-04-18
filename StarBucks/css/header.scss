@@ -1,0 +1,148 @@
+/* 헤더 영역 */
+header {
+    background-color: #f6f5ef;
+    border-bottom: 1px solid #e5e5e5;
+    border-top: 2px solid #000;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 9999;
+    .gnb {
+        height: auto;
+        .util-nav {
+            color: #333;
+            display: block;
+            font: normal 13px Avenir, Arial, georgia;
+            text-align: center;
+            width: 100%;
+            padding-right: 54px;
+            padding-top: 8px;
+            line-height: 2;
+            .sub-nav::after {
+                display: block;
+                content: "";
+                width: 30px;
+                height: 30px;
+            }
+            .sub-nav {
+                display: flex;
+                justify-content: right;
+                align-items: center;
+                color: #555;
+                margin-bottom: 15px;
+                li{
+                    padding-left: 15px;
+                    padding-right: 15px;
+                    font-size: 13px;
+                    float: left;
+                }
+                li::after{
+                    content: "|";
+                    font-weight: 100;
+                    opacity: 0.5;
+                    margin-left: 30px;
+                }
+                li:last-child::after{
+                    content: "";
+                }
+                .searchBtn {
+                    width: 30px;
+                    background-color: #fff;
+                    border: 1px solid #908d8d;
+                    border-radius: 5px;
+                    padding-top: 5px;
+                    position: relative;
+                    img{
+                        position: absolute;
+                        left: 5px;
+                    }
+                }
+            } // end sub-nav
+            /* 로고 */
+            .Logo {
+                margin-top: 15px;
+                float: left;
+            }
+            .menu-tab{
+                display: flex;
+                justify-content: right;
+                .inner-tab{
+                    height: 56px;
+                    padding-left: 15px;
+                    padding-right: 15px;
+                    .gnb-tab {
+                        li{
+                            display: none;
+                            transition: all 0.5s;
+                        }
+                    }
+                    .gnb-var {
+                        color: #fff;
+                        font-size: 14px;
+                        line-height: 3;
+                        padding-top: 5px;
+                        background-color: #2C2A29;
+                        position: absolute;
+                        width: 100%;
+                        left: 0;
+                        top: 112px;
+                        text-align: left;
+                        height: 0;
+                        opacity: 0;
+                        transition: all 0.5s;
+                        z-index: -1;
+                        .gnb-tab {
+                            display: flex;
+                            li{
+                                width: 220px;
+                                ul{
+                                    li{
+                                        color: #999;
+                                        font-size: 12px;
+                                        line-height: 2;
+                                        cursor: pointer;
+                                    }
+                                    li:hover{
+                                        color: #fff;
+                                        transition: all 0.5s;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .inner-tab:hover{
+                    background-color: #2C2A29;
+                    color: #64a70b;
+                }
+                .inner-tab:hover .gnb-var{
+                    transition: all 0.5s;
+                }
+                /* 마우스 호버시 gnb */
+                .coffe:hover .coffe-gnb,
+                .menu:hover .menu-gnb,
+                .news:hover .news-gnb,
+                .responstible:hover .responsibility-gnb,
+                .reward:hover .rewards-gnb,
+                .sale:hover .corporate-gnb,
+                .store:hover .store-gnb {
+                    opacity: 1;
+                    /* display: block; */
+                    height: 300px;
+                    z-index: 11;
+                }
+                .coffe:hover .gnb-tab li,
+                .menu:hover .gnb-tab li,
+                .news:hover .gnb-tab li,
+                .responstible:hover .gnb-tab li,
+                .reward:hover .gnb-tab li,
+                .sale:hover .gnb-tab li,
+                .store:hover .gnb-tab li {
+                    /* opacity: 1; */
+                    display: block;
+                }
+            }
+        } // end util-nav
+    } // end gnb
+} // end header
+/* end header */
