@@ -1,0 +1,39 @@
+
+.reserve{
+    background-image: url("../images/reserve_bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 80% -50px;
+    display: flex;
+    height: 45vh;
+    position: relative;
+    
+    .reserve-text{
+        position: absolute;
+        left: 30%;
+        z-index: 2;
+        top: 15vh;
+    }
+    .reserve-img{
+        position: absolute;
+        left: 55%;
+        z-index: 1;
+    }
+    .reserve-more{
+        position: absolute;
+        left: 40%;
+        top: 60%;
+        p {
+            font-weight: bold;
+            border: 2px solid #000;
+            border-radius: 5px;
+            padding: 5px 15px 8px 15px;
+            cursor: pointer;
+        }
+        p:hover {
+            color: #fff;
+            background-color: #000;
+            transition: all 0.5s;
+        }
+    }
+}

@@ -28,7 +28,7 @@
                 width: 120px;
                 margin-top: 60px;
             }
-            p:hover{
+            p:last-child:hover{
                 background-color: #ef869a;
                 border-color: #ef869a;
                 color: #fff;
@@ -39,3 +39,4 @@
     }// end cherry-main
 } 
 /* end belend */
+
