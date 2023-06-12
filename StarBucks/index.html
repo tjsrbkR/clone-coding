@@ -29,9 +29,13 @@
             .active {
                 /* left: 50%; */
                 left:-50px !important;
-                transition: all 1s;
+                transition: all 1.5s;
             }
-           
+            .on{
+                /* right: 150px !important; */
+                right: 130px !important;
+                transition: all 1.5s;
+            }
         </style>
     </head>
     <body>
@@ -483,7 +487,7 @@
         <section class="find-store">
             <div class="w1100 find-store-inner">
                 <div class="find-store-left">
-                    <div class="find-store-img-box">
+                    <div class="find-store-img-box ">
                         <img src="./images/store_img1.png" alt="스토어 이미지">
                     </div>
                     <div class="find-store-img-box ab">
@@ -492,14 +496,16 @@
                 </div>
                 <div class="find-store-bg">
                 </div>
-                <div class="find-store-right box">
+                <div class="find-store-right">
                     <div class="find-store-animate">
                         <img src="./images/finde-store-h4.png" alt="">
                     </div>
                     <div class="find-store-animate">
                         <img src="./images/finde-store-h5.png" alt="">
                     </div>
-                    <p>매장 찾기</p>
+                    <div class="find-store-animate">
+                        <p >매장 찾기</p>
+                    </div>
                     <div class="store-img">
                         <img src="./images/finde-store-store.png" alt="">
                     </div>
@@ -529,9 +535,19 @@
             }
         });
         };
+        const findeStoreAnimate = (entries, observer) => {
+        entries.forEach(entry => {
+            if(entry.isIntersecting) {
+            entry.target.classList.add('on');
+            } else {
+            entry.target.classList.remove('on');
+            }
+        });
+        };
         const observer = new IntersectionObserver(callback, option);
+        const findeStore = new IntersectionObserver(findeStoreAnimate, option);
         boxes.forEach(box => observer.observe(box));
-        findeBox.forEach(box => observer.observe(box));
+        findeBox.forEach(box => findeStore.observe(box));
     </script>
     <script src="./js/idenx.js"></script>
 </html>

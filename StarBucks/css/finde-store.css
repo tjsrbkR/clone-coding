@@ -4,11 +4,10 @@
   background-repeat: no-repeat;
   background-position: center center;
   overflow: hidden;
-  height: 400px;
+  max-height: 100vh;
 }
 .find-store .find-store-inner {
   display: flex;
-  justify-content: space-between;
   position: relative;
 }
 .find-store .find-store-inner .find-store-left {
@@ -34,8 +33,23 @@
   margin-top: 100px;
   margin-right: 13%;
 }
-.find-store .find-store-inner .find-store-right img {
-  display: block;
+.find-store .find-store-inner .find-store-right .find-store-animate {
+  position: absolute;
+}
+.find-store .find-store-inner .find-store-right .find-store-animate:nth-child(1) {
+  right: -15%;
+  top: 25%;
+}
+.find-store .find-store-inner .find-store-right .find-store-animate:nth-child(2) {
+  right: -10%;
+  top: 50%;
+}
+.find-store .find-store-inner .find-store-right .find-store-animate:nth-child(3) {
+  display: flex;
+  justify-content: left;
+  width: 374px;
+  right: -5%;
+  top: 75%;
 }
 .find-store .find-store-inner .find-store-right p {
   margin-top: 30px;
@@ -54,7 +68,7 @@
 .find-store .find-store-inner .find-store-right .store-img {
   position: absolute;
   right: 0;
-  bottom: -2 40%;
+  bottom: -28%;
 }
 
 /*# sourceMappingURL=finde-store.css.map */

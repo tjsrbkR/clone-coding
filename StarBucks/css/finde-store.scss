@@ -4,10 +4,9 @@
     background-repeat: no-repeat;
     background-position: center center;
     overflow: hidden;
-    height: 400px;
+    max-height: 100vh;
     .find-store-inner{
         display: flex;
-        justify-content: space-between;
         position: relative;
         .find-store-left{
             position: relative;
@@ -31,8 +30,24 @@
         .find-store-right{
             margin-top: 100px;
             margin-right: 13%;
-            img{
-                display: block;
+            // 애니메이션 효과를 위해 공통 코딩
+            .find-store-animate{
+                position: absolute;
+            }
+            .find-store-animate:nth-child(1){
+                right: -15%;
+                top: 25%;
+            }
+            .find-store-animate:nth-child(2){
+                right: -10%;
+                top: 50%;
+            }
+            .find-store-animate:nth-child(3){
+                display: flex;
+                justify-content: left;
+                width: 374px;
+                right: -5%;
+                top: 75%;
             }
             p{
                 margin-top: 30px;
@@ -53,7 +68,8 @@
             .store-img{
                 position: absolute;
                 right: 0;
-                bottom: -2 40%;
+                bottom: -28%;
+                
             }
 
         }
