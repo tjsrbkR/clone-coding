@@ -23,6 +23,7 @@
             <link rel="stylesheet" type="text/css" href="./css/reward.css">
             <link rel="stylesheet" type="text/css" href="./css/notice.css">
             <link rel="stylesheet" type="text/css" href="./css/reserve.css">
+            <link rel="stylesheet" type="text/css" href="./css/finde-store.css">
         <title>Starbucks Korea</title>
         <style>
             .active {
@@ -479,9 +480,40 @@
                 </p>
             </div>
         </section>
-        
+        <section class="find-store">
+            <div class="w1100 find-store-inner">
+                <div class="find-store-left">
+                    <div class="find-store-img-box">
+                        <img src="./images/store_img1.png" alt="스토어 이미지">
+                    </div>
+                    <div class="find-store-img-box ab">
+                        <img src="./images/store_img2.png" alt="스토어 이미지">
+                    </div>
+                </div>
+                <div class="find-store-bg">
+                </div>
+                <div class="find-store-right box">
+                    <div class="find-store-animate">
+                        <img src="./images/finde-store-h4.png" alt="">
+                    </div>
+                    <div class="find-store-animate">
+                        <img src="./images/finde-store-h5.png" alt="">
+                    </div>
+                    <p>매장 찾기</p>
+                    <div class="store-img">
+                        <img src="./images/finde-store-store.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <div class="w1100">                
+                
+            </div>
+        </footer>
     </body>
     <script>
+        const findeBox = document.querySelectorAll(".find-store-animate");
         const boxes = document.querySelectorAll('.box');
         const option = {
         root: null, //viewport
@@ -499,6 +531,7 @@
         };
         const observer = new IntersectionObserver(callback, option);
         boxes.forEach(box => observer.observe(box));
+        findeBox.forEach(box => observer.observe(box));
     </script>
     <script src="./js/idenx.js"></script>
 </html>
