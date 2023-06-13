@@ -1,4 +1,19 @@
 footer{
-    background: #2C2A29;
+    background-color: #2C2A29;
+    color: #fff;
+    height: 500px;
     padding: 32px 0 35px 0;
+    
+
+    .footer-wrap{
+        .company{
+            li{
+                font-size: 12px;
+                line-height: 2;
+            }
+            li:first-child{
+                font-size: 16px;
+            }
+        }
+    }
 }
