@@ -1,19 +1,101 @@
 footer{
     background-color: #2C2A29;
     color: #fff;
-    height: 500px;
     padding: 32px 0 35px 0;
+    position: relative;
+    button:hover,li:hover{
+        text-decoration: underline;
+        cursor: pointer;
+    }
     
-
     .footer-wrap{
-        .company{
+        font-size: 12px;
+        .footer-tap{
+            display: flex;
+            justify-content: space-between;
+            ul{
+                li{
+                    font-size: 12px;
+                    line-height: 2;
+                }
+                li:first-child{
+                    font-size: 14px;
+                }
+            }    
+        }
+        margin-bottom: 17%;
+    }
+    .footer-banner{
+        position: absolute;
+        left: 0;
+        top: 50%;
+        width: 100%;
+        background-color: #282828;
+        padding-top: 20px;
+        ul{
+            margin-left: 19%;
+            padding-bottom: 20px;
+            margin-bottom: 20px;
             li{
+                float: left;
+            }
+        }
+    }
+    .footer-aside{
+        font-size: 12px;
+        padding-top: 30px;
+        ul{
+            display: flex;
+            justify-content: center;
+            li{
+                color: #ccc;
+                margin-right: 8px;
+                span{
+                    font-weight: bold;
+                    color: #00b050;
+                }
+            }
+            li::after{
+                content: "|";
+                font-weight: bold;
+                color: #393939;
+                margin-left: 8px;
+            }
+            li:last-child::after{
+                content: "";
+                margin: 0;
+            }
+        }
+        div{
+            display: flex;
+            justify-content: center;
+            margin-bottom: 10px;
+            button{
+                background: none;
+                border: 2px solid #fff;
+                border-radius: 3px;
+                color: #fff;
+                display: inline-block;
                 font-size: 12px;
-                line-height: 2;
+                margin: 10px 5px 0 5px;
+                line-height: 30px;
+                padding: 3px 26px 0;
+
             }
-            li:first-child{
-                font-size: 16px;
+        }
+        .copyright{
+            line-height: 40px;
+        }
+        .copyright{
+            li:hover{
+                text-decoration: none !important;
+                cursor: inherit;
             }
+        }
+        p{
+            text-align: center;
+            line-height: 30px;
+            color: #ccc;
         }
     }
 }

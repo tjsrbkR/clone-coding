@@ -3,7 +3,7 @@ body {
 }
 /* safe area */
 .w1100 {
-    width: 59.29166666666667%;
+    width: 61.66666666666667%;
     margin: 0 auto;
 }
 
@@ -12,6 +12,7 @@ body {
     position: fixed;
     right: 10%;
     top: 15%;
+    z-index: 11;
 }
 
 .add div {
