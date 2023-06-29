@@ -25,9 +25,11 @@
             <link rel="stylesheet" type="text/css" href="./css/reserve.css">
             <link rel="stylesheet" type="text/css" href="./css/finde-store.css">
             <link rel="stylesheet" type="text/css" href="./css/footer.css">
+            <link rel="stylesheet"  href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+            <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
         <title>Starbucks Korea</title>
         <style>
-            .active {
+            .active1 {
                 /* left: 50%; */
                 left:-50px !important;
                 transition: all 1.5s;
@@ -380,7 +382,7 @@
                                 <li class="on">시스템 개선 및 서비스 점검 안내</li>
                                 <li>탄소중립포인트 인센티브 지급 기준 안내</li>
                                 <li>스타벅스 코리아 샃핑 홈페이지 및 이메일 주의 안내</li>
-                                <li>Summer 시즌 사이렌 오더 음료 기본 설정 변경 안내</li>
+                                <li>Summer 시즌 사이렌오더 음료 기본설정 변경 안내</li>
                             </ul>
                         </div>
                         <div class="arrow">
@@ -396,6 +398,45 @@
                 <p>
                     <img src="./images/btn_prom_down.png">
                 </p>
+            </div>
+            
+        </section>
+        <section class="poromotion-swiper">
+            <!-- Slider main container -->
+            <div class="swiper">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">
+                    <div class="swiper-img">
+                        <img src="./images/promotion-swiper-img1.jpg" alt="프로모션 이미지">
+                    </div>
+                    <p class="btn-slogan">
+                        자세히 보기
+                    </p>
+                </div>
+                <div class="swiper-slide">
+                    <div class="swiper-img">
+                        <img src="./images/promotion-swiper-img2.jpg" alt="프로모션 이미지">
+                    </div>
+                    <p class="btn-slogan">
+                        자세히 보기
+                    </p>
+                </div>
+                <div class="swiper-slide">
+                    <div class="swiper-img">
+                        <img src="./images/promotion-swiper-img3.jpg" alt="프로모션 이미지">
+                    </div>
+                    <p class="btn-slogan">
+                        자세히 보기
+                    </p>
+                </div>
+                </div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
             </div>
         </section>
         <section class="new-rewards-wrap ">
@@ -618,9 +659,9 @@
         const callback = (entries, observer) => {
         entries.forEach(entry => {
             if(entry.isIntersecting) {
-            entry.target.classList.add('active');
+            entry.target.classList.add('active1');
             } else {
-            entry.target.classList.remove('active');
+            entry.target.classList.remove('active1');
             }
         });
         };

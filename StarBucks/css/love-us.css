@@ -5,16 +5,16 @@
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  z-index: -1;
   margin: 0 auto;
   height: 55vh;
   width: 100%;
+  position: relative;
 }
 .love-us .love-us-container .main-text {
   position: absolute;
   width: 20.8333333333%;
   left: 13%;
-  top: 40%;
+  top: 30%;
 }
 .love-us .love-us-container .main-text img {
   width: 100%;
@@ -24,6 +24,22 @@
   width: 100%;
   height: 100%;
   padding: 40px;
+}
+.love-us .love-us-container .btn-slogan {
+  width: 120px;
+  border: 2px solid #014938;
+  color: #014938;
+  padding: 5px 15px 10px 15px;
+  border-radius: 5px;
+  font-size: 16px;
+  position: absolute;
+  left: 19%;
+  top: 55%;
+  text-align: center;
+  cursor: pointer;
+}
+.love-us .love-us-container .btn-slogan div {
+  font-weight: 700;
 }
 .love-us .love-us-container .btn-slogan:hover {
   background-color: #007042;
